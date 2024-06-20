@@ -1,0 +1,51 @@
+Write a program to generate the following series 7, 5, 8, 6, 9….
+
+Input Format
+
+Read n value
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print series
+
+Sample Input 0
+
+5
+Sample Output 0
+
+7 5 8 6 9
+Sample Input 1
+
+10
+Sample Output 1
+
+7 5 8 6 9 7 10 8 11 9
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    int first_term = 7;
+    int second_term = 5;
+    int i;
+    scanf("%d",&n);
+    for (i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", first_term);
+            first_term += 1;
+        } else {
+            printf("%d ", second_term);
+            second_term += 1;
+        }
+    }
+    printf("\n");
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
